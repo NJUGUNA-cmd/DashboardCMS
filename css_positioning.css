@@ -1,0 +1,83 @@
+/* 1. Position Property Types */
+.element {
+  /* Static (Default) - follows normal document flow */
+  position: static;
+
+  /* Relative - positioned relative to its normal position */
+  position: relative;
+  top: 10px;     /* moves down 10px from original position */
+  left: 20px;    /* moves right 20px from original position */
+
+  /* Absolute - positioned relative to nearest positioned ancestor */
+  position: absolute;
+  top: 0;        /* distance from top of positioned parent */
+  right: 0;      /* distance from right of positioned parent */
+
+  /* Fixed - positioned relative to viewport (stays during scroll) */
+  position: fixed;
+  bottom: 20px;  /* always 20px from bottom of screen */
+  right: 20px;   /* always 20px from right of screen */
+
+  /* Sticky - hybrid of relative and fixed */
+  position: sticky;
+  top: 0;        /* sticks to top when scroll reaches it */
+}
+
+/* 2. Display Types */
+.element {
+  /* Block - takes full width, creates new line */
+  display: block;
+
+  /* Inline - takes only needed width, no new line */
+  display: inline;
+
+  /* Inline-block - inline but can set width/height */
+  display: inline-block;
+
+  /* Flex - flexible box layout */
+  display: flex;
+
+  /* Grid - grid layout */
+  display: grid;
+}
+
+/* 3. Common Layout Patterns */
+
+/* Center element horizontally and vertically */
+.center-absolute {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Center using flex */
+.center-flex {
+  display: flex;
+  justify-content: center;    /* horizontal center */
+  align-items: center;        /* vertical center */
+}
+
+/* Sticky header */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Fixed footer */
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
