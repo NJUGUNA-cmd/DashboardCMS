@@ -25,11 +25,11 @@ const initThree = () => {
 
   // Create scene
   scene = new THREE.Scene()
-  scene.background = new THREE.Color(0x1a1b2e)
+  scene.background = new THREE.Color(0.5, 0.5, 0.5)
 
   // Create camera
   const aspect = canvasContainer.value.clientWidth / canvasContainer.value.clientHeight
-  camera = new THREE.PerspectiveCamera(75, aspect, 0.1, 1000)
+  camera = new THREE.PerspectiveCamera(110, aspect, 0.1, 1000)
   camera.position.set(0, 2, 5) // Adjusted camera position
 
   // Create renderer
@@ -55,7 +55,7 @@ const initThree = () => {
   scene.add(directionalLight)
 
   // Add grid helper
-  const gridHelper = new THREE.GridHelper(10, 10, 0x444444, 0x444444)
+  const gridHelper = new THREE.GridHelper(10, 10, 0.8, 0.8)
   scene.add(gridHelper)
 
   // Add a cube
